@@ -87,6 +87,14 @@ foreach ($automobiliai as $auto) {
     }
 }
 
+// visu automobiliu bendra rida (ridos suma)
+
+$visu_ridu_suma = 0;
+
+foreach ($automobiliai as $auto) {
+    $visu_ridu_suma += $auto['rida'];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -197,6 +205,11 @@ foreach ($automobiliai as $auto) {
             <p>Darbinis tūris: <?php echo $seniausias_auto['darbinis_turis']; ?> l</p>
             <p>Spalva: <?php echo $seniausias_auto['spalva']; ?></p>
         </div>
+    </div>
+
+    <div class="block">
+        <h2>Visų automobilių ridų suma</h2>
+        <p><?php echo $visu_ridu_suma; ?> km</p>
     </div>
 
     <div class="modal-wrapper">
