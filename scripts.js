@@ -22,5 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         });
     });
+    
+    document.querySelector('.modal-wrapper').addEventListener('click', function(event) {
+        event.target.classList.remove('active');
+    });
 
 });
