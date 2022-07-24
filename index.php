@@ -67,6 +67,16 @@ $automobiliai = array(
     )
 );
 
+// naujausio automobilio paieska
+
+$naujausias_auto = $automobiliai[0];
+
+foreach ($automobiliai as $auto) {
+    if ($auto['gamybos_metai'] > $naujausias_auto['gamybos_metai']) {
+        $naujausias_auto = $auto;
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
