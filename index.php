@@ -7,7 +7,7 @@ $automobiliai = array(
         'rida' => 124587,
         'darbinis_turis' => 1.6,
         'gamybos_metai' => 2010,
-        'spalva' => 'pilka'
+        'spalva' => 'balta'
     ),
     array(
         'marke' => 'tesla',
@@ -109,6 +109,32 @@ $metu_vidurkis = round( $metu_suma / count($automobiliai) );
 
 for ($i = 0; $i < count($automobiliai); $i++) {
     $automobiliai[$i]['amzius'] = date('Y') - $automobiliai[$i]['gamybos_metai'];
+}
+
+// kiek kokiu skirtingu spalvu yra
+
+$skirtingos_spalvos = array();
+
+foreach ($automobiliai as $auto) {
+    
+    $spalva_yra = false;
+
+    for ($i = 0; $i < count($skirtingos_spalvos); $i++) { 
+        if ($auto['spalva'] == $skirtingos_spalvos[$i]['spalva']) {
+            $spalva_yra = true;
+            $skirtingos_spalvos[$i]['atsikartojimai']++;
+            break;
+        }
+    }
+
+    if (!$spalva_yra) {
+        $spalva = array(
+            'spalva' => $auto['spalva'],
+            'atsikartojimai' => 1
+        );
+        array_push($skirtingos_spalvos, $spalva);
+    }
+
 }
 
 ?>
