@@ -167,5 +167,7 @@ $automobiliai = array(
         </div>
     </div>
 
+    <script src="scripts.js"></script>
+
 </body>
 </html>
