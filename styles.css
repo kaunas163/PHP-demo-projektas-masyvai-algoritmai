@@ -49,3 +49,27 @@ th {
 .auto-blocks-list .auto-block h3 {
     margin-top: 0;
 }
+
+.modal-wrapper:not(.active) {
+    display: none;
+}
+
+.modal-wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-wrapper .modal {
+    background-color: white;
+    max-width: 500px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1em 2em;
+}

@@ -149,5 +149,15 @@ $automobiliai = array(
         ?>
     </div>
 
+    <div class="modal-wrapper">
+        <div class="modal">
+            <h2 class="title"></h2>
+            <p class="metai">Gamybos metai: <span></span></p>
+            <p class="rida">Rida: <span></span></p>
+            <p class="darbinis">Darbinis tūris: <span></span> l</p>
+            <p class="spalva">Spalva: <span></span></p>
+        </div>
+    </div>
+
 </body>
 </html>
