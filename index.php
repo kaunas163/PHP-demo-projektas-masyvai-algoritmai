@@ -135,7 +135,15 @@ $automobiliai = array(
             if (count($automobiliai) > 0) {
                 echo '<div class="auto-blocks-list">';
                 foreach ($automobiliai as $auto) {
-                    echo '<div class="auto-block">';
+                    $atributai = 'class="auto-block"';
+                    $atributai .= ' data-marke="' . $auto['marke'] . '"';
+                    $atributai .= ' data-modelis="' . $auto['modelis'] . '"';
+                    $atributai .= ' data-rida="' . $auto['rida'] . '"';
+                    $atributai .= ' data-darbinis_turis="' . $auto['darbinis_turis'] . '"';
+                    $atributai .= ' data-gamybos_metai="' . $auto['gamybos_metai'] . '"';
+                    $atributai .= ' data-spalva="' . $auto['spalva'] . '"';
+    
+                    echo '<div '. $atributai . '>';
                     echo '<h3>' . $auto['marke'] . ' ' . $auto['modelis'] . '</h3>';
                     echo '<p>Gamybos metai: ' . $auto['gamybos_metai'] . '</p>';
                     echo '<button class="more-info-about-car">Plačiau</button>';
