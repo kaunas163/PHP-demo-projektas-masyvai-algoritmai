@@ -3,7 +3,7 @@
     font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, th {
     font-weight: 800;
 }
 
@@ -18,4 +18,17 @@ body {
     padding: 1em 2em;
     border-radius: 10px;
     margin: 2em auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 2px 5px;
+}
+
+th {
+    background-color: #e7e7e7;
 }
