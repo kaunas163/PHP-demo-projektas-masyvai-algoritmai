@@ -127,5 +127,27 @@ $automobiliai = array(
         ?>
     </div>
 
+    <div class="block">
+        <h2>Pradiniai duomenys kortelėse</h2>
+
+        <?php
+        
+            if (count($automobiliai) > 0) {
+                echo '<div class="auto-blocks-list">';
+                foreach ($automobiliai as $auto) {
+                    echo '<div class="auto-block">';
+                    echo '<h3>' . $auto['marke'] . ' ' . $auto['modelis'] . '</h3>';
+                    echo '<p>Gamybos metai: ' . $auto['gamybos_metai'] . '</p>';
+                    echo '<button class="more-info-about-car">Plačiau</button>';
+                    echo '</div>';
+                }
+                echo '</div>';
+            } else {
+                echo '<p>Šiuo metu nėra įvestos automobilių informacijos.</p>';
+            }
+        
+        ?>
+    </div>
+
 </body>
 </html>
