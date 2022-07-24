@@ -1,9 +1,4 @@
-<?php
-
-require_once('duomenys.php');
-require_once('algoritmai.php');
-
-?>
+<?php require_once('duomenys.php'); ?>
 
 <!DOCTYPE html>
 <html lang="lt">

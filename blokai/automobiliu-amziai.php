@@ -1,3 +1,11 @@
+<?php
+
+for ($i = 0; $i < count($automobiliai); $i++) {
+    $automobiliai[$i]['amzius'] = date('Y') - $automobiliai[$i]['gamybos_metai'];
+}
+
+?>
+
 <div class="block">
     <h2>Automobilių amžiai</h2>
     <p>Dabartiniai metai: <?php echo date('Y'); ?></p>

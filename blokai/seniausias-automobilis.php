@@ -1,3 +1,15 @@
+<?php
+
+$seniausias_auto = $automobiliai[0];
+
+foreach ($automobiliai as $auto) {
+    if ($auto['gamybos_metai'] < $seniausias_auto['gamybos_metai']) {
+        $seniausias_auto = $auto;
+    }
+}
+
+?>
+
 <div class="block">
     <h2>Seniausias automobilis</h2>
     <div class="one-auto-block">

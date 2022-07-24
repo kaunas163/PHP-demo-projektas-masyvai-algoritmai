@@ -1,3 +1,17 @@
+<?php
+
+$dabartiniai_metai = date('Y');
+
+$naujausi_automobiliai = array();
+
+foreach ($automobiliai as $auto) {
+    if ($dabartiniai_metai - $auto['gamybos_metai'] <= 10) {
+        array_push($naujausi_automobiliai, $auto);
+    }
+}
+
+?>
+
 <div class="block">
     <h2>Automobiliai, kurių amžius yra 10 metų ar mažiau</h2>
 
