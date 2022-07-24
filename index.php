@@ -95,6 +95,16 @@ foreach ($automobiliai as $auto) {
     $visu_ridu_suma += $auto['rida'];
 }
 
+// metu vidurkio paieska
+
+$metu_suma = 0;
+
+foreach ($automobiliai as $auto) {
+    $metu_suma += $auto['gamybos_metai'];
+}
+
+$metu_vidurkis = round( $metu_suma / count($automobiliai) );
+
 ?>
 
 <!DOCTYPE html>
@@ -210,6 +220,11 @@ foreach ($automobiliai as $auto) {
     <div class="block">
         <h2>Visų automobilių ridų suma</h2>
         <p><?php echo $visu_ridu_suma; ?> km</p>
+    </div>
+
+    <div class="block">
+        <h2>Metų vidurkis</h2>
+        <p><?php echo $metu_vidurkis; ?></p>
     </div>
 
     <div class="modal-wrapper">
