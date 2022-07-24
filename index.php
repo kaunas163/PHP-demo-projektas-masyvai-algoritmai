@@ -105,6 +105,12 @@ foreach ($automobiliai as $auto) {
 
 $metu_vidurkis = round( $metu_suma / count($automobiliai) );
 
+// automobilio amziaus pridejimas
+
+for ($i = 0; $i < count($automobiliai); $i++) {
+    $automobiliai[$i]['amzius'] = date('Y') - $automobiliai[$i]['gamybos_metai'];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -226,7 +232,7 @@ $metu_vidurkis = round( $metu_suma / count($automobiliai) );
         <h2>Metų vidurkis</h2>
         <p><?php echo $metu_vidurkis; ?></p>
     </div>
-    
+
     <div class="block">
         <h2>Kiek vidutiniškai per metus yra nuvažiavęs kiekvienas automobilis</h2>
 
