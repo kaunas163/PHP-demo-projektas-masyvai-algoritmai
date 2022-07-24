@@ -137,6 +137,18 @@ foreach ($automobiliai as $auto) {
 
 }
 
+// automobiliai kurie naujesni nei 10 metu
+
+$dabartiniai_metai = date('Y');
+
+$naujausi_automobiliai = array();
+
+foreach ($automobiliai as $auto) {
+    if ($dabartiniai_metai - $auto['gamybos_metai'] <= 10) {
+        array_push($naujausi_automobiliai, $auto);
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
